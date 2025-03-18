@@ -9,7 +9,8 @@ Aqui você encontrará stored procedures, functions, packages, triggers, tables 
 - **Ferramentas Recomendadas:** SQL Developer, SQL*Plus, PL/SQL Developer
 - **Integrações:** APIs externas (ViaCEP, NewsAPI)
 - **Segurança:** Sistema de autenticação embutido
-
+- **Oracle Apex(aplicação):** https://g34c6d0394af2ad-db5ale1.adb.sa-saopaulo-1.oraclecloudapps.com/ords/r/agro_ds/intelicity
+  
 ## Estrutura do Repositório
 ```
 /
