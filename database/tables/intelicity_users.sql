@@ -6,7 +6,8 @@ create table intelicity_users (
     created_at timestamp default current_timestamp,
     created_by varchar2(255) default user,
     updated_at timestamp default current_timestamp,
-    updated_by varchar2(255) default user
+    updated_by varchar2(255) default user,
+    last_login timestamp default null
 );
 
 comment on table intelicity_users is 'Table to store users of the system';

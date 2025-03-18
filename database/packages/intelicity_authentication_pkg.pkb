@@ -14,6 +14,10 @@ create or replace package body intelicity_authentication_pkg as
     from intelicity_users
     where trim(upper(username)) = trim(upper(p_username));
 
+    update intelicity_users
+       set last_login = sysdate
+     where id = l_user_id;
+
     return l_password = get_hash( p_username => p_username
                                 , p_password => p_password  );
   exception
