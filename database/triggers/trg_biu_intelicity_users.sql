@@ -10,8 +10,11 @@ begin
     :new.updated_at := current_timestamp;
     :new.updated_by := user;
     :new.username := upper(:new.username);
-    :new.password := intelicity_authentication_pkg.get_hash(
-        p_username => :new.username
-      , p_password => :new.password
-    );
+    
+    if :new.password != :old.password then
+      :new.password := intelicity_authentication_pkg.get_hash(
+          p_username => :new.username
+        , p_password => :new.password
+      ); 
+    end if;
 end;
